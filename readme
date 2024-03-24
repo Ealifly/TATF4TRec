@@ -1,0 +1,8 @@
+1.Format the dataset as follows：
+    userid,itemid,timestamp,timeslot,timesegment,num_of_week
+    0,0,1337018411,18,3,7
+    ...
+2.Split the dataset: train，validation，test
+    ./Data/test.csv, ./Data/validation.csv, ./Data/train.csv,
+    For each dataset, the test sample comprises the interactions from the last week of each user, while the validation sample comprises the interactions from the second-to-last week of each user. The remaining interactions are used for training.
+3.run_nyc.py
