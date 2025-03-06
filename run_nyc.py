@@ -9,20 +9,18 @@ from model import *
 from evaluation import evaluation
 
 torch.manual_seed(123)
-data_path = './Data/NYC'  # 4070Ti
-
 
 # <editor-fold, desc='load train, validation and test dataset'>
-all_data = pd.read_csv(os.path.join(data_path, 'NYC.csv'))
+all_data = pd.read_csv('NYC.csv')
 num_users = max(all_data.userid.tolist()) + 1
 num_items = max(all_data.itemid.tolist()) + 1
 num_timesegment = 8
 
 print('#user:{:.0f}, #category:{:.0f}, #interation:{:.0f}'.format(num_users, num_items, len(all_data)))
 
-tr_df = pd.read_csv(os.path.join(data_path, 'train.csv'))
-va_df = pd.read_csv(os.path.join(data_path, 'validation.csv'))
-ts_df = pd.read_csv(os.path.join(data_path, 'test.csv'))
+tr_df = pd.read_csv('train.csv')
+va_df = pd.read_csv('validation.csv')
+ts_df = pd.read_csv('test.csv')
 
 
 # validation
